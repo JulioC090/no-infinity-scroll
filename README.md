@@ -1,52 +1,84 @@
-# React + Vite + CRXJS
+<h1 align="center">🌀 No Infinity Scroll</h1>
 
-This template helps you quickly start developing Chrome extensions with React, TypeScript and Vite. It includes the CRXJS Vite plugin for seamless Chrome extension development.
+> Take back your focus — block Shorts, Reels & endless scroll traps.
 
-## Features
+<p align="center"> 
+  <img src="./docs/static/demo.gif" width="640" alt="No Infinity Scroll Demo"> 
+</p> 
 
-- React with TypeScript
-- TypeScript support
-- Vite build tool
-- CRXJS Vite plugin integration
-- Chrome extension manifest configuration
+<p align="center"> 
+  English 
+  | 
+  <a href="./docs/readme/pt-BR/README.md">Português</a> 
+</p>
 
-## Quick Start
+No Infinity Scroll is a Chrome extension built with React, TypeScript, and Vite (CRXJS) that blocks addictive infinite-scroll experiences such as YouTube Shorts, Instagram Reels, and other similar content traps — helping you reclaim your time and focus.
 
-1. Install dependencies:
+## 📌 Table of Contents
+- [🔹 What is No Infinity Scroll?](#-what-is-no-infinity-scroll)
+- [🚀 Getting Started](#-getting-started)
+- [⚙️ Features](#️-features)
+- [📂 Project Structure](#-project-structure)
+- [📜 License](#-license)
+
+## 🔹 What is No Infinity Scroll?
+No Infinity Scroll acts as a digital self-defense layer that disables or blocks infinite scrolling sections in social media platforms and video apps.
+
+It’s designed to help users avoid compulsive consumption loops, focusing instead on meaningful and intentional browsing.
+
+## 🚀 Getting Started
+
+### 📋 Requirements
+Before installation, make sure you have:
+- [Node.js](https://nodejs.org/en) (for development)
+- [Chrome Browser](https://www.google.com/intl/en-US/chrome) (for testing the extension)
+
+### Installation
+1. Install dependencies
 
 ```bash
-npm install
+pnpm install
 ```
 
-2. Start development server:
+2. Start development server
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
-3. Open Chrome and navigate to `chrome://extensions/`, enable "Developer mode", and load the unpacked extension from the `dist` directory.
+3. Load the extension into Chrome
+- Open `chrome://extensions/`
+- Enable Developer Mode
+- Click Load unpacked
+- Select the `/dist` folder
 
-4. Build for production:
+4. Build for production
 
 ```bash
-npm run build
+pnpm build
 ```
 
-## Project Structure
+## ⚙️ Features
 
-- `src/popup/` - Extension popup UI
-- `src/content/` - Content scripts
-- `manifest.config.ts` - Chrome extension manifest configuration
+✅ Block YouTube Shorts navigation – Detects and prevents access to the Shorts interface.  
+✅ Block Instagram Reels – Intercepts and blocks Reels pages and feeds.  
+✅ Non-intrusive – Works silently in the background without UI clutter.
 
-## Documentation
+## 📂 Project Structure
 
-- [React Documentation](https://reactjs.org/)
-- [Vite Documentation](https://vitejs.dev/)
-- [CRXJS Documentation](https://crxjs.dev/vite-plugin)
+```
+no-infinity-scroll/
+│── src/
+│   ├── content/
+│   │   ├── instagram/       # Logic to block Reels navigation
+│   │   ├── youtube/         # Logic to block Shorts navigation
+│   │   └── shared/          # Common scripts
+│── manifest.config.ts       # CRXJS manifest configuration
+│── vite.config.ts           # Vite build setup
+│── package.json
+│── README.md
+```
 
-## Chrome Extension Development Notes
-
-- Use `manifest.config.ts` to configure your extension
-- The CRXJS plugin automatically handles manifest generation
-- Content scripts should be placed in `src/content/`
-- Popup UI should be placed in `src/popup/`
+## 📜 License
+This project is licensed under the **MIT License**.  
+See the [LICENSE](./LICENSE) file for details.
