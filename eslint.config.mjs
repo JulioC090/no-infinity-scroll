@@ -41,7 +41,7 @@ export default defineConfig(
             '@ianvs/prettier-plugin-sort-imports',
             'prettier-plugin-tailwindcss',
           ],
-          tailwindStylesheet: './src/popup/index.css',
+          /* tailwindStylesheet: './src/popup/index.css', */
           importOrder: [
             '^(react/(.*)$)|^(react$)',
             '^(next/(.*)$)|^(next$)',

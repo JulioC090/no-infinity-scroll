@@ -13,9 +13,7 @@ export default defineManifest({
     default_icon: {
       48: 'public/logo.png',
     },
-    default_popup: 'src/popup/index.html',
   },
-  permissions: ['contentSettings'],
   content_scripts: [
     {
       matches: ['https://www.youtube.com/*'],
